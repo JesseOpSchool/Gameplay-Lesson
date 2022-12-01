@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,6 +7,8 @@ public class Enemy : MonoBehaviour
 {
     public float speed = 15f;
     public float dirX = 1f;
+    public int health = 2;
+    bool isAlive = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,5 +31,20 @@ public class Enemy : MonoBehaviour
                 dirX *= -1f;
             }
         }
+    }
+
+    public void takeDamage()
+    {
+        health--;
+
+        if (health <= 0)
+        {
+            die();
+        }
+    }
+
+    void die()
+    {
+        Debug.Log("Die!");
     }
 }

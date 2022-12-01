@@ -244,7 +244,7 @@ GameObject:
   m_Component:
   - component: {fileID: 174003209}
   - component: {fileID: 174003210}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -442,7 +442,7 @@ GameObject:
   - component: {fileID: 318083476}
   - component: {fileID: 318083475}
   - component: {fileID: 318083479}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -595,7 +595,7 @@ GameObject:
   - component: {fileID: 334723266}
   m_Layer: 0
   m_Name: Ground (3)
-  m_TagString: Ground
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -703,7 +703,7 @@ GameObject:
   m_Component:
   - component: {fileID: 379452662}
   - component: {fileID: 379452663}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1006,6 +1006,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   dirX: 1
+  health: 2
 --- !u!1 &1275401042
 GameObject:
   m_ObjectHideFlags: 0
@@ -1019,7 +1020,7 @@ GameObject:
   - component: {fileID: 1275401044}
   m_Layer: 0
   m_Name: Ground (4)
-  m_TagString: Ground
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1278,6 +1279,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8617592295570749437, guid: 34a09525768ec3b4abb85e812ed0c125, type: 3}
       propertyPath: m_Name
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 8617592295570749437, guid: 34a09525768ec3b4abb85e812ed0c125, type: 3}
+      propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 8617592295570749438, guid: 34a09525768ec3b4abb85e812ed0c125, type: 3}
