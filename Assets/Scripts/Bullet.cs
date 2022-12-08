@@ -30,6 +30,7 @@ public class Bullet : MonoBehaviour
             Enemy enemyScript = collision.gameObject.GetComponent<Enemy>();
 
             enemyScript.takeDamage();
+            Destroy(gameObject);
         }
     }
 }
