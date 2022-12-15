@@ -7,6 +7,8 @@ public class Bullet : MonoBehaviour
     public float speed = 15f;
     public float lifetime = 3f;
     public float dirX = 1f;
+    private int score;
+
     // Start is called before the first frame update
     void Start()
     {

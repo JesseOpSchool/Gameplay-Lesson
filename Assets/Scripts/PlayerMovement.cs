@@ -15,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
     private bool canDoubleJump;
     public GameObject Bullet;
     private float facingDirX = 1;
+    public int hp = 1;
 
 
     // Start is called before the first frame update
@@ -80,6 +81,12 @@ public class PlayerMovement : MonoBehaviour
        
     }
 
+    void Die()
+    {
+        hp--;
+        Debug.Log("Player Dies!");
+    }
+
     //ground check
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -98,9 +105,5 @@ public class PlayerMovement : MonoBehaviour
         }
         
     }
-
-    
-
-    
 
 }

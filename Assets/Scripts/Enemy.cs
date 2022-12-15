@@ -36,7 +36,7 @@ public class Enemy : MonoBehaviour
 
             if (hit.collider != null)
             {
-                if (hit.collider.CompareTag("Wall"))
+                if (hit.collider.CompareTag("Wall") || hit.collider.CompareTag("Enemy"))
                 {
                     dirX *= -1f;
                 }
