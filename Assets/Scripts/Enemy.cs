@@ -1,4 +1,5 @@
 using JetBrains.Annotations;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,7 @@ public class Enemy : MonoBehaviour
 {
     public float speed = 15f;
     public float dirX = 1f;
+    public float startingDir = 1f;
 
     Animator anim;
 
@@ -16,7 +18,8 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        anim = GetComponent<Animator>();
+        dirX = startingDir;
+        anim = GetComponentInChildren<Animator>();
     }
 
     // Update is called once per frame
@@ -54,5 +57,8 @@ public class Enemy : MonoBehaviour
     {
         isAlive = false;
         anim.SetBool("isAlive", isAlive);
+        GetComponent<BoxCollider2D>().enabled = false;
+        GetComponent<Rigidbody2D>().gravityScale = 0;
+        Destroy(gameObject, 1.4f);
     }
 }
