@@ -6,9 +6,12 @@ public class EnemySpawner : MonoBehaviour
 {
 
     public GameObject enemy;
+    public ScoreScript scoreScript;
     public float minWait;
     public float maxWait;
+
     private bool isSpawning;
+    
 
     void Awake()
     {
@@ -30,5 +33,6 @@ public class EnemySpawner : MonoBehaviour
         // Code to spawn your Prefab here
         isSpawning = false;
         GameObject newObject = Instantiate(enemy);
+        newObject.GetComponent<Enemy>().scoreScript = scoreScript;
     }
 }

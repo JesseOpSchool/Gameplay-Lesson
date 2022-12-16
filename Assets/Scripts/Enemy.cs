@@ -3,12 +3,15 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class Enemy : MonoBehaviour
 {
     public float speed = 15f;
     public float dirX = 1f;
     public float startingDir = 1f;
+    public ScoreScript scoreScript;
+    public int scoreValue;
 
     Animator anim;
 
@@ -59,6 +62,7 @@ public class Enemy : MonoBehaviour
         anim.SetBool("isAlive", isAlive);
         GetComponent<BoxCollider2D>().enabled = false;
         GetComponent<Rigidbody2D>().gravityScale = 0;
+        scoreScript.UpdateScore(scoreValue);
         Destroy(gameObject, 1.4f);
     }
 }

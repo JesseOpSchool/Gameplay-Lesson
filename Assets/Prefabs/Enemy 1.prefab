@@ -203,6 +203,8 @@ MonoBehaviour:
   speed: 5
   dirX: 1
   startingDir: 1
+  scoreScript: {fileID: 0}
+  scoreValue: 5
   health: 2
 --- !u!1 &2933192103122184756
 GameObject:
